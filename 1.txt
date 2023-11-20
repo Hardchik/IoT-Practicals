@@ -1,0 +1,13 @@
+**Study and implement LED Blink for microcontroller**
+
+#include <msp430.h>
+int main(void) {
+WDTCTL = WDTPW | WDTHOLD; P1DIR = 00000001;
+P1OUT = 00000001;
+unsigned int i; while (1) {
+P1OUT = 00000000;
+for (i = 0; i<50000; i++); P1OUT = 00000001;
+for (i = 0; i<50000; i++);
+}
+return 0;
+}
